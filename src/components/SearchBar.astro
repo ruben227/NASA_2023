@@ -1,0 +1,15 @@
+---
+import IconSearch from './icons/IconSearch.astro'
+import IconLocation from './icons/IconLocation.astro'
+---
+
+<div class="rounded-md  grid md:grid-cols-[1fr_1fr] grid-cols-[1fr]  bg-[#9146DC0D] shadow-xl">
+    <div class="p-6 flex gap-x-[20px] border-r ">
+        <IconSearch/>
+        <input class="bg-transparent w-full text-black placeholder:text-black" placeholder="Search by topic, title, keyword, ..." type="text" name="study" id="study" >
+    </div>
+    <div class="p-6 flex gap-x-[20px]"> 
+        <IconLocation/>
+        <input class="w-full bg-transparent text-black placeholder:text-black" placeholder="Cuidad, provincia/estado, ...." type="text" name="place" id="place">
+    </div>
+</div>

@@ -1,0 +1,22 @@
+---
+type Props = {
+    number: string;
+    name: string;
+    category: string;
+    image: string;
+}
+
+const {number, name, category, image} = Astro.props;
+---
+
+<div class="relative">
+    <span class="text-[128px] font-bold font-heading text-[#D5D1D8] absolute top-0 left-0 bg-gradient-to-b from-[#D5D1D8] to-80% to-[#FFF] text-transparent bg-clip-text inline-block">#{number}</span>
+    <div class="z-10 relative pl-[148px] pt-[98px]">
+        <img src={image} alt="Edward">
+        <h3 class="text-[#222] font-heading font-bold text-[32px] pt-3">{name}</h3>
+        <p class="text-lg text-[#908E8E] pt-2">{category}</p>
+        <div class="pt-4">
+            <button class="h-[40px] border-2 border-[#9146DC] px-6 leading-[40px] text-[14px] text-[#9146DC] font-bold rounded-[8px] text-base">View profile</button>
+        </div>
+    </div>
+</div>

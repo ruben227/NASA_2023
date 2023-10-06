@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         "main-purple": "#9146DC",
       },
+	  gridAutoColumns: {
+        '4fr': 'minmax(0, 4fr)',
+      }
     },
     fontFamily: {
       sans: ["Inter", "Helvetica", "Arial", "sans-serif"],

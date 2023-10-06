@@ -3,13 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/header.astro';
 import ImageHero from '../components/ImageHero.astro';
 import Heading from '../components/heading.astro';
+import DisciplineWrapper from '../components/discipline-wrapper.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<Header />
 	<ImageHero/>
 	<main class="mt-[162px] mx-auto max-w-[1200px]">
-		<Heading name='Esto es un título'>
+		<Heading name='Choose your discipline' />
+		<DisciplineWrapper  />
 	</main>
 </Layout>
 

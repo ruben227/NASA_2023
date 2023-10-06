@@ -10,6 +10,10 @@ module.exports = {
         "main-purple": "#9146DC",
       },
     },
+    fontFamily: {
+      sans: ["Inter", "Helvetica", "Arial", "sans-serif"],
+      heading: ["Space Grotesk", "Arial", "Helvetica", "sans-serif"],
+    },
   },
   plugins: [],
 };

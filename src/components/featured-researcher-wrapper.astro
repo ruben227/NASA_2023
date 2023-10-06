@@ -1,0 +1,44 @@
+---
+import FeaturedResearcher from "./featured-researcher.astro";
+const researchers = [
+{ 
+    "name": "Edward Smith", 
+    "category": "Biology" ,
+    "image": "../../public/edward.png"
+},
+{ 
+    "name": "Kate Nielsen", 
+    "category": "Astronomy" ,
+    "image": "../../public/kate.jpeg"
+},
+{ 
+    "name": "Allison Philips", 
+    "category": "Agriculture" ,
+    "image": "../../public/allison.jpeg"
+},
+{ 
+    "name": "Anika Korsgard", 
+    "category": "Biology" ,
+    "image": "../../public/anika.jpeg"
+},
+{ 
+    "name": "Leo Dorwart", 
+    "category": "Astronomy",
+    "image": "../../public/leo.jpeg"
+},
+{ 
+    "name": "Carter Herwitz", 
+    "category": "Agriculture",
+    "image": "../../public/carter.jpeg"
+}
+];
+---
+<section>
+    <div class="grid grid-cols-3 grid-rows-2 gap-4">
+        {
+          researchers.map((researcher, index) => (
+            <FeaturedResearcher number={`${index+1}`}  name={researcher.name} category="" image={researcher.image}  />
+          ))
+        }
+      </div>
+</section>

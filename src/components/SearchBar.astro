@@ -1,17 +1,46 @@
 ---
-import IconSearch from './icons/IconSearch.astro'
-import IconLocation from './icons/IconLocation.astro'
+import IconSearch from "./icons/IconSearch.astro";
+import IconLocation from "./icons/IconLocation.astro";
 ---
 
-<div class="w-[892px] mx-auto my-0 rounded-md  grid md:grid-cols-[1fr_1fr] grid-cols-[1fr] bg-white shadow-xl" style="    position: absolute;
+<div
+  class="w-[892px] mx-auto my-0 rounded-md grid md:grid-cols-[1fr_1fr] grid-cols-[1fr] bg-white shadow-xl fade-in"
+  style="    position: absolute;
 bottom: calc(0px - 42.5px);
-left: calc(50% - 446px);">
-    <div class="p-6 flex gap-x-[20px] border-r bg-[#9146DC0D]  ">
-        <IconSearch/>
-        <input class="bg-transparent w-full text-black placeholder:text-black" placeholder="Search by topic, title, keyword, ..." type="text" name="study" id="study" >
-    </div>
-    <div class="p-6 flex gap-x-[20px] bg-[#9146DC0D] "> 
-        <IconLocation/>
-        <input class="w-full bg-transparent text-black placeholder:text-black" placeholder="Cuidad, provincia/estado, ...." type="text" name="place" id="place">
-    </div>
+left: calc(50% - 446px);"
+>
+  <div class="p-6 flex gap-x-[20px] border-r bg-[#9146DC0D]">
+    <IconSearch />
+    <input
+      class="bg-transparent w-full text-black placeholder:text-black"
+      placeholder="Search by topic, title, keyword, ..."
+      type="text"
+      name="study"
+      id="study"
+    />
+  </div>
+  <div class="p-6 flex gap-x-[20px] bg-[#9146DC0D]">
+    <IconLocation />
+    <input
+      class="w-full bg-transparent text-black placeholder:text-black"
+      placeholder="Cuidad, provincia/estado, ...."
+      type="text"
+      name="place"
+      id="place"
+    />
+  </div>
 </div>
+<style>
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fade-in 1s ease-in-out forwards;
+  }
+</style>

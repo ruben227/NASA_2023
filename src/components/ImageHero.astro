@@ -1,9 +1,43 @@
 ---
-import imgHero from '../../public/img-hero.jpeg';
-import SearchBar from './SearchBar.astro';
+import imgHero from "../../public/img-hero.jpeg";
+import SearchBar from "./SearchBar.astro";
 ---
 
 <section class="relative">
-    <img class="w-full h-[500px] object-cover object-bottom" src={imgHero.src} alt="">
-    <SearchBar/>
+  <img
+    class="w-full h-[500px] object-cover object-bottom"
+    src={imgHero.src}
+    alt=""
+  />
+  <h1
+    class="font-heading text-7xl absolute w-max top-2/4 left-2/4 transform-title text-white font-bold fade-in"
+  >
+    Empower your projects
+  </h1>
+  <p
+    class="font-heading text-[2.75rem] absolute w-max top-2/4 left-2/4 transform-subtitle text-white font-bold fade-in"
+  >
+    Research Hub
+  </p>
+  <SearchBar />
 </section>
+<style>
+  .transform-title {
+    transform: translate(-50%, -100%);
+  }
+  .transform-subtitle {
+    transform: translate(-50%, 50%);
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fade-in 1s ease-in-out forwards;
+  }
+</style>

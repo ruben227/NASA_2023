@@ -1,0 +1,48 @@
+---
+import DisciplineCard from "./discipline-card.astro";
+
+const skills = [
+  {
+    name: "Agriculture",
+    icon: "/agriculture.svg",
+  },
+  {
+    name: "Technology",
+    icon: "/icon_bag.svg",
+  },
+  {
+    name: "Chemistry",
+    icon: "/icon_flask.svg",
+  },
+  {
+    name: "Computer & IT",
+    icon: "/icon_Desktop_.svg",
+  },
+  {
+    name: "Mathematics",
+    icon: "/icon_mathematics.svg",
+  },
+  {
+    name: "Business",
+    icon: "/icon_bag.svg",
+  },
+  {
+    name: "Genetics",
+    icon: "/icon_dna.svg",
+  },
+  {
+    name: "Neuroscience",
+    icon: "/icon_brain.svg",
+  },
+];
+---
+
+<section>
+  <div class="grid grid-cols-4 grid-rows-2 gap-4">
+    {
+      skills.map((skill) => (
+        <DisciplineCard name={skill.name} icon={skill.icon} />
+      ))
+    }
+  </div>
+</section>

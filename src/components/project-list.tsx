@@ -32,7 +32,8 @@ export function ProjectList() {
         onInput={fetchSearch}
         id="project-search"
         type="search"
-        className="bg-purple"
+        className="bg-purple border-b mb-8 text-sm focus:outline-none p-4"
+        placeholder="Search.."
       />
       <div className="grid grid-cols-2 grid-rows-2 gap-[3.563rem]  mb-[9.688rem]">
         {projects.length > 0 &&

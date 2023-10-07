@@ -9,6 +9,6 @@ const ITEMS_PER_PAGE = 4;
 
 ---
 
-<div class="grid grid-cols-2 grid-rows-2">
+<div class="grid grid-cols-2 grid-rows-2 gap-[3.563rem]">
 {Array.from({length: ITEMS_PER_PAGE}).map((_, index) => <ProjectCard id={projects.projects[index].projectId} />)}
 </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ProjectCard } from "./project-card.tsx";
+import { ProjectCard } from "./project-card";
+import React from "react";
 
 const ITEMS_PER_PAGE = 4;
 
@@ -36,6 +37,11 @@ export function ProjectList() {
         placeholder="Search.."
       />
       <div className="grid grid-cols-2 grid-rows-2 gap-[3.563rem]  mb-[9.688rem]">
+        {projects.length === 0 && (
+          <div className="w-full col-end-3 col-start-1 py-4 flex items-center justify-center">
+            <img src="spinner.svg" alt="Loading" />
+          </div>
+        )}
         {projects.length > 0 &&
           Array.from({ length: ITEMS_PER_PAGE }).map(
             (_: any, index: number) => (

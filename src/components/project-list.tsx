@@ -14,13 +14,34 @@ export function ProjectList() {
       });
   }, []);
 
+  function fetchSearch(e: any) {
+    console.log(e.target.value);
+    fetch(
+      `https://techport.nasa.gov/api/projects/search?titleSearch=${e.target.value}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.projects);
+        setProjects(data.projects);
+      });
+  }
+
   return (
-    <div className="grid grid-cols-2 grid-rows-2 gap-[3.563rem]  mb-[9.688rem]">
-      <input id="project-search" type="search" />
-      {projects.length > 0 &&
-        Array.from({ length: ITEMS_PER_PAGE }).map((_: any, index: number) => (
-          <ProjectCard id={projects[index].projectId} key={index} />
-        ))}
-    </div>
+    <>
+      <input
+        onInput={fetchSearch}
+        id="project-search"
+        type="search"
+        className="bg-purple"
+      />
+      <div className="grid grid-cols-2 grid-rows-2 gap-[3.563rem]  mb-[9.688rem]">
+        {projects.length > 0 &&
+          Array.from({ length: ITEMS_PER_PAGE }).map(
+            (_: any, index: number) => (
+              <ProjectCard id={projects[index].projectId} key={index} />
+            )
+          )}
+      </div>
+    </>
   );
 }

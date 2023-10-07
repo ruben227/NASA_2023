@@ -5,7 +5,7 @@ import ImageHero from '../components/ImageHero.astro';
 import Heading from '../components/heading.astro';
 import DisciplineWrapper from '../components/discipline-wrapper.astro';
 import FeaturedResearcherWrapper from '../components/featured-researcher-wrapper.astro';
-import ProjectList from '../components/project-list.astro';
+import {ProjectList} from '../components/project-list.tsx';
 import Footer from '../components/footer.astro'
 ---
 
@@ -16,10 +16,9 @@ import Footer from '../components/footer.astro'
 		<Heading name='Choose your discipline' />
 		<DisciplineWrapper  />
 		<Heading name='Projects' />
-		<ProjectList /> 
+		<ProjectList client:load /> 
 		<Heading name='Featured researches' />
 		<FeaturedResearcherWrapper/>
-
 	</main>
 	<Footer />
 </Layout>

@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         "main-purple": "#9146DC",
+        "main-black" :"#222"
       },
 	  gridAutoColumns: {
         '4fr': 'minmax(0, 4fr)',
